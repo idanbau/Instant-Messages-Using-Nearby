@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium">10dp</dimen>
+    <dimen name="small">6dp</dimen>
+    <dimen name="normal">16dp</dimen>
+    <dimen name="large">37dp</dimen>
+    <dimen name="large_top_bar_height">70dp</dimen>
+    <dimen name="h1_text_max_width">296dp</dimen>
+    <dimen name="small_icon">18dp</dimen>
+    <dimen name="icon_size">23dp</dimen>
+    <dimen name="input_height">57dp</dimen>
+    <dimen name="img_size">250dp</dimen>
+    <dimen name="max_button_width">350dp</dimen>
+    <dimen name="button_height">54dp</dimen>
+</resources>
