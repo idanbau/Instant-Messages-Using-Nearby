@@ -36,6 +36,9 @@ This project is licensed under the terms of the GPL-3.0 license.
 
 ## Features
 1.encrypted using nearby connections api.
+
 2.search inside messages.
-3.notifications.
+
+3.notifications for new messages.
+
 4.long range (tested for 300 meters).
