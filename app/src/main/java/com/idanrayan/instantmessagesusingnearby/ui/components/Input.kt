@@ -61,8 +61,9 @@ fun Input(
             trailingIcon = action,
             singleLine = singleLine,
             keyboardOptions = KeyboardOptions(
-                keyboardType = keyboardType, capitalization = keyboardCapitalization),
-            textStyle= androidx.compose.ui.text.TextStyle(textDirection = TextDirection.Content),
+                keyboardType = keyboardType, capitalization = keyboardCapitalization
+            ),
+            textStyle = androidx.compose.ui.text.TextStyle(textDirection = TextDirection.Content),
             leadingIcon = leading,
             maxLines = maxLines
         )

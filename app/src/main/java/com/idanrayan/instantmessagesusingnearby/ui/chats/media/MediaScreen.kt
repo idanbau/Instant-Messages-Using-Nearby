@@ -107,10 +107,10 @@ fun MediaScreen(mediaViewModel: MediaViewModel = hiltViewModel()) {
                             modifier = Modifier.fillMaxHeight()
                         ) {
                             Text(
-                                when(item.name){
-                                    SenderType.SENT.name->stringResource(R.string.sent)
-                                    SenderType.ALL.name->stringResource(R.string.all)
-                                    SenderType.RECEIVED.name->stringResource(R.string.received)
+                                when (item.name) {
+                                    SenderType.SENT.name -> stringResource(R.string.sent)
+                                    SenderType.ALL.name -> stringResource(R.string.all)
+                                    SenderType.RECEIVED.name -> stringResource(R.string.received)
                                     else -> ""
                                 }
                             )
@@ -153,14 +153,13 @@ fun MediaScreen(mediaViewModel: MediaViewModel = hiltViewModel()) {
                 }
             }
         }
-    ) {
-
+    ) { padding->
         LazyVerticalGrid(
             columns = GridCells.Adaptive(150.dp),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.normal)),
             horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.normal)),
             contentPadding = PaddingValues(dimensionResource(R.dimen.normal)),
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize().padding(padding),
         ) {
             items(images, key = { it.id }) {
                 val file = remember {

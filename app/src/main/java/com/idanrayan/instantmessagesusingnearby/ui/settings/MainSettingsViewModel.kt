@@ -18,7 +18,7 @@ class MainSettingsViewModel @Inject constructor(
     val name = dataStoreManager.name()
 
     fun saveName(name: String) {
-        if(name.isNotEmpty() && name.length < MAXIMUM_NAME_LENGTH) {
+        if (name.isNotEmpty() && name.length < MAXIMUM_NAME_LENGTH) {
             viewModelScope.launch {
                 dataStoreManager.setName(name)
             }

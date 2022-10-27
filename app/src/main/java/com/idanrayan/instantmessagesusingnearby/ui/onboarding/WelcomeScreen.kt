@@ -26,7 +26,9 @@ fun WelcomeScreen() {
         modifier = Modifier.fillMaxSize()
     ) {
         Box(
-            modifier= Modifier.weight(1F).background(color = MaterialTheme.colors.background)
+            modifier = Modifier
+                .weight(1F)
+                .background(color = MaterialTheme.colors.background)
         ) {
             Image(
                 painter = painterResource(R.drawable.applogo),

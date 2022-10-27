@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
-import androidx.compose.ui.platform.LocalTextInputService
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
@@ -36,12 +35,6 @@ fun NameContent(name: String, onNameChange: (String) -> Unit) {
             },
             name = name
         )
-    }
-    val keyboard = LocalTextInputService.current
-
-    LaunchedEffect(key1 = openNameDialog) {
-        delay(200)
-        keyboard?.hideSoftwareKeyboard()
     }
 
     Text(stringResource(R.string.personal_settings), style = MaterialTheme.typography.h5)

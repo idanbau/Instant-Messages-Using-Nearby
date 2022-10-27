@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "users")
 data class User(
-    @PrimaryKey @ColumnInfo(name = "device_id") @NonNull val deviceId: String,
-    @ColumnInfo(name = "name") @NonNull val name: String
-){
+    @PrimaryKey @ColumnInfo(name = "device_id") val deviceId: String,
+    @ColumnInfo(name = "name") val name: String
+) {
     override fun toString(): String = """
         device id:$deviceId] name:$name
         """

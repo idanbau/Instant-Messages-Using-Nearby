@@ -225,14 +225,18 @@ fun shareMedia(context: Context, message: Message) {
     val sendIntent: Intent = Intent().apply {
         action = Intent.ACTION_SEND
         if (message.type == MessageType.MESSAGE.type) putExtra(Intent.EXTRA_TEXT, message.message)
-        else putExtra(Intent.EXTRA_STREAM, Uri.parse(if(message.fromMe) message.message else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) File(
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                message.message
-            ).toString() else File(
-                "${Environment.getExternalStorageDirectory()}/Download/${message.message}"
-            ).toString()
-        }))
+        else putExtra(
+            Intent.EXTRA_STREAM, Uri.parse(
+                if (message.fromMe) message.message else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) File(
+                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                        message.message
+                    ).toString() else File(
+                        "${Environment.getExternalStorageDirectory()}/Download/${message.message}"
+                    ).toString()
+                }
+            )
+        )
         type = message.type
     }
     val shareIntent = Intent.createChooser(sendIntent, null)

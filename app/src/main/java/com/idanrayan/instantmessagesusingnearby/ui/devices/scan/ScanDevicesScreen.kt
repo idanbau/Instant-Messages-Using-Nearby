@@ -7,12 +7,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalTextInputService
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -31,11 +29,6 @@ fun ScanDevicesScreen(
     viewModel: ScanDevicesViewModel
 ) {
     val discoveryState by viewModel.discoveryState.observeAsState(Mode.OFF)
-    val keyboard = LocalTextInputService.current
-    LaunchedEffect(key1 = discoveryState) {
-        keyboard?.hideSoftwareKeyboard()
-    }
-
     var endPointID = ""
     val localConnectLaunchPermissions =
         checkMultiplePermissions {

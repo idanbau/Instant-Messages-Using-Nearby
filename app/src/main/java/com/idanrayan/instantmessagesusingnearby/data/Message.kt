@@ -24,7 +24,7 @@ data class Message(
     @ColumnInfo(name = "from_me") val fromMe: Boolean,
     val time: Timestamp = Timestamp(System.currentTimeMillis()),
     val type: String = MessageType.MESSAGE.type
-){
+) {
     override fun toString(): String = message
 }
 

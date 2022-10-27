@@ -73,7 +73,7 @@ fun SendMessageBar(
                             )
                         }
                     },
-                    singleLine= false,
+                    singleLine = false,
                     hint = stringResource(R.string.type_something),
                     keyboardCapitalization = KeyboardCapitalization.Sentences
                 )

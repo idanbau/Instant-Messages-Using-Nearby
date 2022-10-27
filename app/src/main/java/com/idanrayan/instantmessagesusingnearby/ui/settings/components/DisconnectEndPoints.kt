@@ -7,4 +7,5 @@ import androidx.compose.ui.res.stringResource
 import com.idanrayan.instantmessagesusingnearby.R
 
 @Composable
-fun DisconnectAllEndPoints(onClick: () -> Unit) = Button(onClick = onClick) { Text(stringResource(R.string.disconnect_endpoints)) }
+fun DisconnectAllEndPoints(onClick: () -> Unit) =
+    Button(onClick = onClick) { Text(stringResource(R.string.disconnect_endpoints)) }
