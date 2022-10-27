@@ -61,7 +61,6 @@ fun MediaScreen(mediaViewModel: MediaViewModel = hiltViewModel()) {
             it.type.startsWith(messageType.type.substring(0, messageType.type.indexOf("/")))
         }
     }
-//
     var activeIndex by remember { mutableStateOf(1) }
     val navController = LocalNavController.current
     selectedImg?.let {

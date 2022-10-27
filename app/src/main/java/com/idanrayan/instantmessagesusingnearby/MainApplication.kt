@@ -11,15 +11,16 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class MainApplication : Application() {
+    companion object {
+        lateinit var res: Resources
+    }
+
     override fun onCreate() {
         super.onCreate()
         res = this.resources
         createNotificationsChannel(applicationContext)
     }
 
-    companion object {
-        lateinit var res: Resources
-    }
 }
 
 private fun createNotificationsChannel(context: Context) {
